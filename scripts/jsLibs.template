@@ -1,0 +1,207 @@
+const TEMPLATE =
+`<optgroup value="Mootools" label="Mootools">
+		<option>Mootools(nightly)</option>
+		<option>Mootools 1.5.2 (nocompat)</option>
+		<option>Mootools 1.5.2</option>
+		<option>Mootools 1.5.1</option>
+		<option>Mootools 1.5.0</option>
+		<option>Mootools 1.4.5 (compat)</option>
+		<option>Mootools 1.4.5</option>
+		<option>Mootools 1.3.2 (compat)</option>
+		<option>Mootools 1.3.2</option>
+		<option>Mootools 1.2.6</option>
+	</optgroup>
+	<optgroup label="jQuery">     
+		<option value="303" >jQuery //code.jquery.com/jquery-2.2.2</option>
+		<option value="46" >jQuery (edge)</option>
+		<option value="260" >jQuery 3.0.0-alpha1</option>
+		<option value="305" >jQuery 2.2.3</option>
+		<option value="295" >jQuery 2.2.1</option>
+		<option value="291" >jQuery 2.2.0</option>
+		<option value="275" >jQuery 2.1.4</option>
+		<option value="248" >jQuery 2.1.3</option>
+		<option value="188" >jQuery 2.1.0</option>
+		<option value="157" >jQuery 2.0.2</option>
+		<option value="301" >jQuery 1.12.2</option>
+		<option value="297" >jQuery 1.12.1</option>
+		<option value="293" >jQuery 1.12.0</option>
+		<option value="186" >jQuery 1.11.0</option>
+		<option value="156" >jQuery 1.10.1</option>
+		<option value="131" >jQuery 1.9.1</option>
+		<option value="112" >jQuery 1.8.3</option>
+		<option value="101" >jQuery 1.7.2</option>
+		<option value="75" >jQuery 1.6.4</option>
+		<option value="307" >jQuery 1.1.3</option>
+	</optgroup>
+	<optgroup label="Prototype">    
+		<option value="265" >Prototype 1.7.3</option>
+		<option value="254" >Prototype 1.7.2</option>
+		<option value="54" >Prototype 1.7.1</option>
+		<option value="4" >Prototype 1.6.1.0</option>
+	</optgroup>
+	<optgroup label="YUI">
+		<option value="230" >YUI 3.17.2</option>
+		<option value="204" >YUI 3.16.0</option>
+		<option value="182" >YUI 3.14.0</option>
+		<option value="153" >YUI 3.10.1</option>
+		<option value="130" >YUI 3.8.0</option>
+		<option value="123" >YUI 3.7.3</option>
+		<option value="118" >YUI 3.6.0</option>
+		<option value="102" >YUI 3.5.0</option>
+		<option value="9" >YUI 2.8.0r4</option>
+	</optgroup>
+	<optgroup label="Glow">
+	</optgroup>
+		<optgroup label="No-Library">
+		<option value="11">No-Library (pure JS)</option>
+	</optgroup>
+	<optgroup label="Dojo">
+		<option value="87" >Dojo (nightly)</option>
+		<option value="240" >Dojo 1.10.4</option>
+		<option value="242" >Dojo 1.9.7</option>
+		<option value="244" >Dojo 1.8.10</option>
+		<option value="246" >Dojo 1.7.8</option>
+		<option value="196" >Dojo 1.6.2</option>
+		<option value="194" >Dojo 1.5.3</option>
+	</optgroup>
+	<optgroup label="Processing.js">
+		<option value="206" >Processing.js 1.4.7</option>
+		<option value="135" >Processing.js 1.4.1</option>
+		<option value="81" >Processing.js 1.3.6</option>
+		<option value="67" >Processing.js 1.2.3</option>
+	</optgroup>
+	<optgroup label="ExtJS">
+		<option value="256" >ExtJS 5.1.0</option>
+		<option value="258" >ExtJS 5.0.0</option>
+		<option value="147" >ExtJS 4.2.0</option>
+		<option value="80" >ExtJS 4.1.1</option>
+		<option value="107" >ExtJS 4.1.0</option>
+		<option value="109" >ExtJS 3.4.0</option>
+		<option value="23" >ExtJS 3.1.0</option>
+	</optgroup>
+		<optgroup label="Raphael">
+		<option value="76" >Raphael 2.1.0</option>
+		<option value="36" >Raphael 1.5.2 (min)</option>
+		<option value="30" >Raphael 1.4</option>
+	</optgroup>
+	<optgroup label="RightJS">
+		<option value="136" >RightJS 2.3.1</option>
+		<option value="45" >RightJS 2.1.1</option>
+	</optgroup>
+	<optgroup label="Three.js">
+		<option value="82" >Three.js r54</option>
+	</optgroup>
+	<optgroup label="Zepto">
+		<option value="90" >Zepto 1.0rc1</option>
+	</optgroup>
+	<optgroup label="Enyo">
+		<option value="115" >Enyo (nightly)</option>
+		<option value="299" >Enyo 2.7.0</option>
+		<option value="238" >Enyo 2.5.1</option>
+		<option value="214" >Enyo 2.4.0</option>
+		<option value="145" >Enyo 2.2.0</option>
+		<option value="121" >Enyo 2.1</option>
+		<option value="116" >Enyo 2.0.1</option>
+	</optgroup>
+	<optgroup label="Shipyard">
+		<option value="99" >Shipyard (nightly)</option>
+		<option value="105" >Shipyard 0.2</option>
+	</optgroup>
+	<optgroup label="Knockout.js">
+		<option value="277" >Knockout.js 3.4.0</option>
+		<option value="172" >Knockout.js 3.0.0</option>
+		<option value="163" >Knockout.js 2.3.0</option>
+		<option value="122" >Knockout.js 2.2.1</option>
+		<option value="117" >Knockout.js 2.1.0</option>
+		<option value="104" >Knockout.js 2.0.0</option>
+	</optgroup>
+	<optgroup label="The X Toolkit">
+		<option value="106" >The X Toolkit edge</option>
+	</optgroup>
+	<optgroup label="AngularJS">
+		<option value="281" >AngularJS 2.0.0-alpha.47</option>
+		<option value="283" >AngularJS 1.4.8</option>
+		<option value="180" >AngularJS 1.2.1</option>
+		<option value="137" >AngularJS 1.1.1</option>
+	</optgroup>
+	<optgroup label="Ember">
+		<option value="190" >Ember (latest)</option>
+	</optgroup>
+	<optgroup label="Underscore">
+		<option value="267" >Underscore 1.8.3</option>
+		<option value="160" >Underscore 1.4.4</option>
+		<option value="133" >Underscore 1.4.3</option>
+		<option value="111" >Underscore 1.3.3</option>
+	</optgroup>
+	<optgroup label="Bonsai">
+		<option value="120" >Bonsai 0.4.1</option>
+	</optgroup>
+	<optgroup label="KineticJS">
+		<option value="139" >KineticJS 4.3.1</option>
+		<option value="124" >KineticJS 4.0.5</option>
+	</optgroup>
+	<optgroup label="FabricJS">
+		<option value="250" >FabricJS 1.5.0</option>
+		<option value="178" >FabricJS 1.4.0</option>
+		<option value="161" >FabricJS 1.2.0</option>
+		<option value="125" >FabricJS 0.9</option>
+	</optgroup>
+	<optgroup label="qooxdoo">
+		<option value="126" >qooxdoo 2.1</option>
+		<option value="127" >qooxdoo 2.0.3</option>
+	</optgroup>
+	<optgroup label="D3">
+		<option value="134" >D3 3.x</option>
+	</optgroup>
+	<optgroup label="CreateJS">
+		<option value="279" >CreateJS 2015.05.21</option>
+		<option value="170" >CreateJS 2013.09.25</option>
+	</optgroup>
+	<optgroup label="WebApp Install">
+		<option value="142" >WebApp Install 0.1</option>
+	</optgroup>
+	<optgroup label="Thorax">
+		<option value="174" >Thorax 2.0.0rc6</option>
+		<option value="143" >Thorax 2.0.0rc3</option>
+	</optgroup>
+	<optgroup label="Paper.js">
+		<option value="158" >Paper.js 0.22</option>
+	</optgroup>
+	<optgroup label="React">
+		<option value="285" >React 0.14.3</option>
+		<option value="192" >React 0.9.0</option>
+		<option value="184" >React 0.8.0</option>
+		<option value="166" >React 0.4.0</option>
+		<option value="159" >React 0.3.2</option>
+	</optgroup>
+	<optgroup label="svg.js">
+		<option value="269" >svg.js 2.1.1</option>
+	</optgroup>
+	<optgroup label="Minified">
+		<option value="164" >Minified 1.0 beta1</option>
+	</optgroup>
+	<optgroup label="jTypes">
+		<option value="165" >jTypes 2.1.0</option>
+	</optgroup>
+	<optgroup label="Lo-Dash">
+		<option value="167" >Lo-Dash 2.2.1</option>
+	</optgroup>
+	<optgroup label="Brick">
+		<option value="176" >Brick edge</option>
+	</optgroup>
+	<optgroup label="RactiveJS">
+		<option value="287" >RactiveJS 0.7.3</option>
+	</optgroup>
+	<optgroup label="Vue">
+		<option value="236" >Vue (edge)</option>
+		<option value="289" >Vue 1.0.12</option>
+	</optgroup>
+	<optgroup label="JSBlocks">
+		<option value="252" >JSBlocks (edge)</option>
+	</optgroup>
+	<optgroup label="OpenUI5">
+		<option value="271" >OpenUI5 (latest, mobile)</option>
+	</optgroup>
+	<optgroup label="MithrilJS">
+		<option value="273" >MithrilJS 0.2.0</option>
+	</optgroup>`;

@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Chunk;
+    src: url(Chunk.ttf);
+}
+body {
+    background-image: url(../imgs/wood_wall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: block;
+    overflow: hidden;
+}
+table {
+    height: 65%;
+
+    border-collapse: collapse;
+}
+caption {
+    color: rgba(177, 161, 146, 0);
+    font: 30px 'Chunk';
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146);
+    
+    animation: capt 2s ease-in-out;
+}
+th, td {
+    color: rgba(0, 0, 0, 1);
+    font-size: 13px;
+
+    border: 2px solid #000;
+}
+th {
+    font-family: Josefin Slab;
+
+    background-color: rgb(122, 104, 84);
+}
+td {
+    font-family: Indie Flower;
+
+    background-color: rgb(177, 161, 146);
+}
+a {
+    color: rgba(0, 0, 0, .7);
+}
+input[type=search] {
+    height: 25px;
+    width: 150px;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: transparent;
+    display: block;
+
+    padding: 5px;
+    border-color: rgb(122, 104, 84);
+    border-radius: 12px;
+    outline: none;
+}
+tbody:nth-of-type(1) th:nth-of-type(1) {
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(1):before {
+    padding-left: 10px;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) td:nth-of-type(1) {
+    text-align: left;
+    padding-left: 10px;
+}
+tbody:nth-of-type(2) select {
+    background: #b1a192;
+    border: none;
+}
+
+.tbody_second {
+    height: 20%;
+    width: 700px;
+
+    position: absolute;
+    top: 405px;
+    right: 48px;
+
+    text-align: center;
+
+    display: inline-table;
+}
+.cup {
+    height: 200px;
+    width: 209px;
+
+    position: absolute;
+    top: -20px;
+    left: 640px;
+    z-index: 1;
+
+    background-size: cover;
+    display: inline-block;
+
+    -webkit-filter: contrast(90%);
+    -moz-filter: contrast(90%);
+}
+.cup_move:hover .cup {
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: cup;
+}
+.coffee_stain {
+    height: 150px;
+    width: 160px;
+
+    position: absolute;
+    top: 5px;
+    left: 655px;
+}
+.fb_icon {
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+    top: 35px;
+    left: 685px;
+
+    background-size: cover;
+    opacity: 0;
+
+    -webkit-filter: drop-shadow(2px 2px 5px #7a6854);
+}
+.cup_move:hover .fb_icon {
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-name: icons;
+}
+.twitter_icon {
+    height: 41px;
+    width: 41px;
+
+    position: absolute;
+    top: 40px;
+    left: 735px;
+
+    background-size: cover;
+    opacity: 0;
+
+    -webkit-filter: drop-shadow(2px 2px 5px #7a6854);
+}
+.cup_move:hover .twitter_icon {
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-name: icons;
+}
+.window_block {
+    height: 458px;
+    width: 100%;
+    min-width: 700px;
+    max-width: 700px;
+
+    position: relative;
+
+    vertical-align: middle;
+
+    background-color: #fff;
+    display: inline-block;
+
+    padding: 50px;
+}
+.cube_fb, .cube_twitter, .find, .fieldset, .find_me, .hand, .logo_fb, .logo_twitter, .tooltip, .tv, .water_content, #pult {
+    display: none;
+}
+
+@keyframes cup {
+    0% {
+        position: absolute;
+        bottom: 360px;
+        left: 681px;
+    }
+    100% {
+        position: absolute;
+        bottom: 360px;
+        left: 860px;
+    }
+}
+@keyframes icons {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes capt {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 10px rgba(177, 161, 146, 0.6), 0px 0px 40px rgba(177, 161, 146, 0.4), 0px 0px 5px rgba(177, 161, 146, 0.3), 0px 0px 130px rgba(177, 161, 146, 0.3);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146), 0px 0px 0px rgb(177, 161, 146);
+    }
+}

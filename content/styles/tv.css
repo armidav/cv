@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Chau+Philomene+One);
+
+body {
+    background-image: url(../imgs/wall.png);
+    background-repeat: repeat;
+}
+table {
+    display: table;
+}
+
+caption {
+    color: rgba(0, 0, 0, 1);
+    font-family: Chau Philomene One;
+}
+th, td {
+    height: 28px;
+
+    color: rgba(0, 0, 0, 1);
+    font-family: Chau Philomene One;
+
+    background-color: rgba(255, 255, 255, .8);
+
+    border-radius: 20px;
+    font-size: 15px;
+}
+tbody:nth-of-type(1) th:nth-of-type(1):before {
+    padding-left: 10px;
+}
+tbody:nth-of-type(1) th:nth-of-type(1){
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) td{
+    text-align: left;
+}
+tbody:nth-of-type(1) td:nth-of-type(1) {
+    padding-left: 10px;
+}
+a {
+    color: rgba(0, 0, 0, .7);
+}
+
+.window_block {
+    height: 544px;
+    width: 100%;
+    min-width: 900px;
+    max-width: 900px;
+
+    position: relative;
+
+    vertical-align: middle;
+
+    display: inline-block;
+    background-image: url(../imgs/tv.png);
+
+    padding: 20px 50px 50px 50px;
+}
+.cube_fb, .cube_twitter, .coffee_stain, .cup, .cup_move, .fb_icon, .fieldset, .find, .find_me, .tooltip, .twitter_icon, .water_content{
+    display: none;
+}
+
+#remote_controller {
+    height: 181px;
+    width: 200px;
+
+    position: absolute;
+    z-index: 1;
+    top: 440px;
+    right: 927px;
+
+    background-image: url(../imgs/remote_controller.png);
+    background-repeat: no-repeat;
+
+    -webkit-filter: invert(85%);
+}

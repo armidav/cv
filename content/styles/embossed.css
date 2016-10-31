@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Crafty+Girls);
+@font-face {
+    font-family: Chunk;
+    src: url(content/fonts/Chunk.ttf);
+}
+body {
+    background-image: url(../imgs/ice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    overflow: hidden;
+}
+
+caption {
+    color: #fff;
+    font: 30px 'Chunk';
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+th, td {
+    color: rgba(0, 0, 0, 1);
+    font-family: Crafty Girls;
+    font-size: 13px;
+}
+tbody:nth-of-type(1) th:nth-of-type(1) {
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) th:nth-of-type(1):before {
+    padding-left: 10px;
+}
+tbody:nth-of-type(1) td:nth-of-type(1) {
+    text-align: left;
+
+    padding-left: 10px;
+}
+a {
+    color: rgba(0, 0, 0, .7);
+}
+
+.cube_fb {
+    height: 200px;
+    width: 200px;
+    
+    position: absolute;
+    top: 80px;
+    right: -95px;
+}
+.cube_twitter {
+    height: 200px;
+    width: 200px;
+
+    position: absolute;
+    top: -40px;
+    right: -120px;
+}
+.tbody_first {
+    width: 100%;
+
+    display: table;
+
+    border-bottom: 20px solid transparent;
+}
+.tbody_second {
+    width: 100%;
+
+    display: table;
+}
+.window_block {
+    width: 100%;
+    min-width: 770px;
+    max-width: 770px;
+   
+    position: relative;
+
+    vertical-align: middle;
+
+    display: inline-block;
+    background-color: rgba(196, 190, 221, 0.6);
+    border-radius: 20px;
+
+    padding: 30px;
+}
+.coffee_stain, .cup, .cup_move, .cvLogo, .fieldset, .find, .find_me, .tooltip, .water_content, #pult{
+    display: none;
+}

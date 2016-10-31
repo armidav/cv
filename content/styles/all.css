@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;    /*box-shadow: 0 0 0 1px red inset;*/
+}
+
+@font-face {
+    font-family: openSans-bold;
+    src: url(../fonts/openSans-bold.ttf);
+}
+html, body, main {
+    height: 100%;
+    width: 100%;
+}
+
+/*body, main {
+    position: relative;
+}*/
+
+body {
+    font-family: openSans-bold;
+    font-size: 11px;
+}
+
+table {
+    width: 100%;
+    counter-reset: section;
+}
+caption {
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+    -webkit-user-select: none;
+}
+th {
+    -webkit-user-select: none;
+}
+input[type="button"] {
+    display: none;
+}
+tbody:nth-of-type(1) th:nth-of-type(1):before {
+    counter-increment: section;
+    content:  counter(section) ". ";
+
+    float: left;
+    
+    display: block;
+}
+/*tbody:nth-of-type(1) th:nth-of-type(1):after {
+    content: '.';
+}*/
+tbody:nth-of-type(1) th:nth-of-type(1):after {
+    content: ':';
+
+    padding-right: 5px;
+}
+tbody:nth-of-type(1) td:nth-of-type(2) {
+    padding-left: 10px;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(2):after {
+    content: ':';
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+q {
+    quotes: '(' ')';
+}
+abbr {
+    text-decoration: none;
+}
+acronym {
+    text-decoration: none;
+}
+input[type='search'] {
+    display: none;
+}
+mark {
+    display: none;
+}
+
+.ampersand {
+    quotes: '&' '&';
+}
+.brackets {
+    quotes: '<' '>';
+}
+.brackets_quotes {
+    quotes: '[\'' '\']';
+}
+.single_quotes {
+    quotes: '\'' '\'';
+}
+.window {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+
+    overflow: auto;
+    
+    padding: 30px;
+    box-sizing: border-box;
+}
+.window:before {
+    content: '';
+
+    height: 100%;
+    width: 0;
+    
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+#medias {
+    position: absolute;
+    top: 20px;
+    left:20px;
+}
+tbody:nth-of-type(1) td:nth-of-type(2) input {
+    width: 20px;
+    box-sizing: border-box;
+}

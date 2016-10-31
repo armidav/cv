@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Chewy);
+
+@font-face {
+    font-family: VinegarStroke;
+    src: url(../fonts/VinegarStroke.ttf);
+}
+@font-face {
+    font-family: Miso;
+    src: url(../fonts/Miso.otf);
+}
+body {
+    background-attachment: fixed;
+    background-image: url(../imgs/brickWall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: start;
+}
+caption {
+    color: #fff;
+    font: 40px 'Miso';
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #DB6D4A, 0 0 30px #DB6D4A, 0 0 40px #DB6D4A, 0 0 50px #DB6D4A, 0 0 75px #DB6D4A;
+}
+th, td {
+    color: rgba(0, 0, 0, 1);
+    font-size: 18px;
+}
+th {
+    font-family: VinegarStroke, Chewy;
+    color: rgb(219, 109, 74);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+td {
+    font-family: Raleway;
+}
+tbody:nth-of-type(1) th:nth-of-type(1) {
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) td {
+    text-align: left;
+}
+tbody:nth-of-type(2) select {
+    display: none;
+}
+a {
+    color: rgba(0, 0, 0, .7);
+}
+mark {
+    display: block;
+}
+
+.tbody_first {
+    width: 100%;
+    
+    display: table;
+
+    border-bottom: 20px solid transparent;
+}
+.tbody_second {    
+    width: 100%;
+
+    display: table;
+}
+.main_imgs_first {
+    height: 70px;
+    width: 75px;
+
+    position: absolute;
+    top: 26px;
+    left: 15px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+
+    animation-delay: 1.5s;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: pushpin_Right;
+
+    -webkit-filter: sepia(50%);
+}
+.main_imgs_second {
+    height: 70px;
+    width: 75px;
+
+    position: absolute;
+    top: 26px;
+    right: 15px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+
+    animation-delay: 1s;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: pushpin_Left;
+
+    -webkit-filter: sepia(50%);
+}    
+.window_block {
+    min-height: 500px;
+    width: 100%;
+    min-width: 760px;
+    max-width: 760px;
+
+    position: relative;
+
+    vertical-align: middle;
+
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px 30px;
+}
+.cube_fb, .cube_twitter, .coffee_stain, .coffee_twitter, .cup, .cup_move, .fb_icon, .fieldset, .find, .find_me, .tooltip, .twitter_icon, .water_content, #pult{
+    display: none;
+}
+
+@keyframes start{
+    from{
+        transform: translate(0, -1000px);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+@keyframes pushpin_Right {
+    0%, 80% {
+        transform: scale(5);
+        opacity: 0;
+    }
+    100% {
+        background-image: url(../imgs/pushpunR_shadow.png);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes pushpin_Left {
+    0%, 80% {   
+        transform: scale(5);
+        opacity: 0;
+    }
+    100% {
+        background-image: url(../imgs/pushPinL_shadow.png);    
+        transform: scale(1);
+        opacity: 1;
+    }

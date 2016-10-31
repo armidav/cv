@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(https://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo);
+@font-face {
+    font-family: LeagueGothic;
+    src: url(content/fonts/LeagueGothic-Regular.otf);
+}
+body {
+    background-image: url(../imgs/wood_pattern.png);
+}
+table {
+    height: 100%;
+    width: 100%;
+
+    border-collapse: collapse;
+}
+caption {
+    color: #5757ea;
+    font: 30px 'LeagueGothic';
+    text-shadow: 0px 1px 1px #4d4d4d;
+
+    padding-bottom: 5px;
+}
+th, td {
+    font-family: Swanky and Moo Moo;
+    font-size: 13px;
+
+    border-top: 1px solid #0040ff;
+    border-bottom: 1px solid #0040ff;
+}
+th {
+    color: rgba(0, 0, 0, 1);
+}
+td {
+    color: rgb(51, 51, 204);
+
+    border-left: 1px solid #000;
+}
+tbody:nth-of-type(2) th {
+    border-right: 1px solid #000;
+}
+tbody:nth-of-type(1) th:nth-of-type(1) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: center;
+
+    border-left: 1px solid #000;
+}
+tbody:nth-of-type(2) th:nth-of-type(5) {
+    border-right: 0;
+}
+tbody:nth-of-type(1) td {
+    text-align: left;
+}
+tbody:nth-of-type(1) td:nth-of-type(1) {
+    padding-left: 10px;
+}
+a {
+    color: rgba(51, 51, 204, .8);
+}
+input[type=search] {
+    position: absolute;
+    top: 10px;
+    right: 840px;
+}
+
+.main_imgs_first {
+    height: 113px;
+    width: 128px;
+
+    position: absolute;
+    top: 15px;
+    right: 30px;
+
+    background-image: url(../imgs/guarantee_stamp.png);
+    background-size: cover;
+
+    animation: stamp 3s 1 ease-in;
+    
+    -webkit-filter: saturate(8);
+}
+.window_block {
+    width: 100%;
+    min-width: 760px;
+    max-width: 760px;
+
+    position: relative;
+
+    vertical-align: middle;
+
+    background-image: url(../imgs/paper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    
+    padding: 50px 0;
+}
+.cube_fb, .cube_twitter, .coffee_stain, .coffee_twitter, .cup, .cup_move, .fb_icon, .fieldset, .find, .find_me, .tooltip, .twitter_icon, .water_content, #pult {
+    display: none;
+}
+
+@keyframes stamp {
+    0%, 80% {
+        transform: scale(6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 5000px) {
+    tbody:nth-of-type(1) th, tbody:nth-of-type(1) td {
+        font-size: 5px;
+    }
+    tbody:nth-of-type(1) a, a:hover {
+        font-size: 5px;
+    }
+    tbody:nth-of-type(2) th, tbody:nth-of-type(2) td {
+        font-size: 5px;
+    }
+    tbody:nth-of-type(2) select {
+        font-size: 5px;
+    }
+}

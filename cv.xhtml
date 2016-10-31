@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>cv</title>
+    <link id="link" rel="icon" type="image" href="content/imgs/icon/tty.ico" />
+	<meta name="author" content="Armida Vardanyan"/>
+	<meta name="description" content="Curriculum Vitae"/>
+	<meta name="keywords" content="HTML,CSS, JS"/>
+	<!--<meta http-equiv="refresh" content="5"/>-->
+	<style type="text/css">
+		/*@import url(content/styles/bundle.css);*/
+		@import url(content/styles/all.css);
+	</style>
+	<script src="scripts/jQuery.js"></script>
+	<script src="scripts/jsLibs.template"></script>
+	<script src="scripts/extensions.js"></script>
+	<script src="scripts/defines.js"></script>
+	<script src="scripts/cv.js"></script>
+</head>
+<body>
+    <main>
+        <audio id="sound" src="content/sounds/screen.mp3" autoplay="autoplay"></audio>
+        <div class="window">
+            <div class="water_content">
+                <div class="water"></div>
+            </div>
+            <select id="medias">
+                <option value="screen">screen</option>
+                <option value="aural">aural</option>
+                <option value="braille">braille</option>
+                <option value="embossed">embossed</option>
+                <option value="handheld">handheld</option>
+                <option value="print">print</option>
+                <option value="projection">projection</option>
+                <option value="speech">speech</option>
+                <option value="tty">tty</option>
+                <option value="tv">tv</option>
+            </select>
+            <div class="window_block">
+                <input type="search" id="Search" name="Search" results="5" placeholder="Search..." oninput="find(this.value);" />
+                <div class="cube_fb">
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="300" height="300"
+                            id="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_fb.swf" align="middle">
+                        <param name="movie" value="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_fb.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#fff" />
+                        <param name="play" value="true" />
+                        <param name="loop" value="true" />
+                        <param name="wmode" value="transparent" />
+                        <param name="scale" value="showall" />
+                        <param name="menu" value="true" />
+                        <param name="devicefont" value="false" />
+                        <param name="salign" value="true" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+
+                        <object type="application/x-shockwave-flash" data="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_fb.swf" width="300" height="300">
+                            <param name="movie" value="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_fb.swf" />
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="#fff" />
+                            <param name="play" value="true" />
+                            <param name="loop" value="true" />
+                            <param name="wmode" value="transparent" />
+                            <param name="scale" value="showall" />
+                            <param name="menu" value="true" />
+                            <param name="devicefont" value="false" />
+                            <param name="salign" value="true" />
+                            <param name="allowScriptAccess" value="sameDomain" />
+                            <a href="http://www.adobe.com/go/getflash">
+                                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                            </a>
+                        </object>
+                    </object>
+                </div>
+                <div class="cube_twitter">
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="300" height="300"
+                            id="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_twitter.swf" align="middle">
+                        <param name="movie" value="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_twitter.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#ffffff" />
+                        <param name="play" value="true" />
+                        <param name="loop" value="true" />
+                        <param name="wmode" value="transparent" />
+                        <param name="scale" value="showall" />
+                        <param name="menu" value="true" />
+                        <param name="devicefont" value="false" />
+                        <param name="salign" value="" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <object type="application/x-shockwave-flash" data="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_twitter.swf" width="300" height="300">
+                            <param name="movie" value="C:\Users\Armida\Desktop\OGMA projections\cv\content\flashes\cube_twitter.swf" />
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="#ffffff" />
+                            <param name="play" value="true" />
+                            <param name="loop" value="true" />
+                            <param name="wmode" value="transparent" />
+                            <param name="scale" value="showall" />
+                            <param name="menu" value="true" />
+                            <param name="devicefont" value="false" />
+                            <param name="salign" value="" />
+                            <param name="allowScriptAccess" value="sameDomain" />
+                            <a href="http://www.adobe.com/go/getflash">
+                                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                            </a>
+                        </object>
+                    </object>
+                </div>
+                <div id="remote_controller" onclick="Tv();"></div>
+                <div class="main_imgs_first"></div>
+                <div class="main_imgs_second"></div>
+                <div class="cup_move">
+                    <img src="content/imgs/cup.png" class="cup" />
+                    <img src="content/imgs/coffee_stain.png" class="coffee_stain" />
+                    <a href="https://www.facebook.com/armida.vardanyan" target="_blank">
+                        <img src="content/imgs/fb_coffee.png" class="fb_icon" />
+                    </a>
+                    <a href="https://twitter.com/VardanyanArmida" target="_blank">
+                        <img src="content/imgs/twitter_coffee.png" class="twitter_icon" />
+                    </a>
+                </div>
+                <div class="find">
+                    <img src="content/imgs/find_me.png" class="find_me" />
+                    <a href="https://www.facebook.com/armida.vardanyan" target="_blank">
+                        <img src="content/imgs/logo_Fb.png" class="fb_icon" />
+                    </a>
+                    <a href="https://twitter.com/VardanyanArmida" target="_blank">
+                        <img src="content/imgs/logo_twitter.png" class="twitter_icon" />
+                    </a>
+                </div>
+                <table id="tv">
+                    <caption>Curriculum vitae</caption>
+                    <tbody class="tbody_first">
+                        <tr>
+                            <th colspan="3" ondblclick="alert(this.innerHTML);">Surname, Name</th>
+                            <td colspan="4">
+                                <surname colspan="2" title="surname"
+                                         onclick="editData(this, 'surname');"
+                                         onmouseover="console.log(this.title);">Vardanyan</surname>
+                                <name title="name"
+                                      onclick="editData(this, 'name');"
+                                      onmouseover="console.log(this.title);">
+                                    <a>
+                                        Armida
+                                        <span class="tooltip">Armida</span>
+                                    </a>
+                                </name>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Birth Date</th>
+                            <td colspan="4">
+                                <time datetime="04-06-1997"
+                                      onclick="editData(this, 'birth date');"
+                                      onmouseover="console.log(this.title);">04.06.1997</time>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Birth Place</th>
+                            <td colspan="4">
+                                <address>
+                                    <country title="country-Armenia"
+                                             onclick="editData(this, 'country');"
+                                             onmouseover="console.log(this.title);">Armenia</country>,
+                                    <city title="city-Yerevan"
+                                          onclick="editData(this, 'city');"
+                                          onmouseover="console.log(this.title);">Yerevan</city>
+                                </address>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Nationality</th>
+                            <td colspan="4"
+                                onclick="editData(this, 'nationality');"
+                                onmouseover="console.log(this.title);">
+                                armenian
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="ellipsis">Home Phone</th>
+                            <td>
+                                <a onclick="editData(this, 'home phone', 'tel:010620322');"
+                                   onmouseover="console.log(this.title);"><q>010</q>62 03 22</a>
+                            </td>
+                            <th>Mobile Phone</th>
+                            <td colspan="2">
+                                <q>
+                                    <select size="1">
+                                        <option label="XXX" title="beeline" value="0" />
+                                        <option label="091" title="beeline" value="1" />
+                                        <option label="099" title="beeline" value="2" />
+                                        <option label="096" title="beeline" value="3" />
+                                        <option label="043" title="beeline" value="4" />
+                                        <option label="093" title="vivacell" value="5" />
+                                        <option label="094" title="vivacell" value="6" />
+                                        <option label="098" title="vivacell" value="7" />
+                                        <option label="077" title="vivacell" value="8" />
+                                        <option label="055" title="orange" value="9" />
+                                        <option label="095" title="orange" value="10" />
+                                        <option label="041" title="orange" value="11" />
+                                    </select>
+                                </q>
+                                <input id="ddd" type="tel" class="tel" maxlength="2" value="" />
+                                <input type="tel" class="tel" maxlength="2" value="" />
+                                <input type="tel" class="tel" maxlength="2" value="" />
+                                <!--<a onclick="editData(this, 'mobile phone', 'skype:096680681?call');"
+                                   onmouseover="console.log(this.title);"><q>096</q>68 06 81</a>-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                <abbr title="Electronic mail">Email</abbr>
+                            </th>
+                            <td class="ellipsis">
+                                <a onclick="editData(this, 'email', 'mailto:vardanyan.armida@gmail.com');"
+                                   onmouseover="console.log(this.title);">vardanyan.armida@gmail.com</a>
+                            </td>
+                            <th>Skype</th>
+                            <td colspan="2">
+                                <a href="skype:armida.vardanyan?call">
+                                    armida.vardanyan
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Proficiency Level</th>
+                            <td colspan="4"
+                                onclick="editData(this, 'prafiency level');"
+                                onmouseover="console.log(this.title);">
+                                <q class="ampersand">TYRO</q>,
+                                <q class="single_quotes">beginner</q>,
+                                novis<q class="brackets_quotes">nov:is</q>,
+                                <q class="brackets">rookie</q>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Working Experience</th>
+                            <td colspan="4"
+                                onclick="editData(this, 'working experience');"
+                                onmouseover="console.log(this.title);">
+                                <a href="forms/naming styles.zip" download="naming styles.zip">Sneaky Form</a>,
+                                <a href="forms/stopwatch.zip" download="stopwatch.zip">Stopwatch</a>,
+                                <a href="forms/calculator.zip" download="calculator.zip">Calculator</a>
+                            </td>
+                        </tr>
+                        <tr class="rowhidden">
+                            <th colspan="3">
+                                <abbr title="Markup Language">ML</abbr> Powers
+                            </th>
+                            <td colspan="4"
+                                onclick="editData(this, 'ML powers');"
+                                onmouseover="console.log(this.title);">
+                                <abbr title="EXtensible Markup Language">
+                                    <a href="https://en.wikipedia.org/wiki/XML" rel="bookmark" target="_blank">XML</a>,
+                                </abbr>
+                                <abbr title="HTML Application">
+                                    <a href="https://en.wikipedia.org/wiki/HTML_Application" rel="bookmark" target="_blank">HTA</a>,
+                                </abbr>
+                                <abbr title="HyperText Markup Language">
+                                    <a href="https://en.wikipedia.org/wiki/HTML" rel="bookmark" target="_blank">HTML</a>,
+                                </abbr>
+                                <abbr title="EXtensible HyperText Markup Language">
+                                    <a href="https://en.wikipedia.org/wiki/XHTML" rel="bookmark" target="_blank">XHTML</a>,
+                                </abbr>
+                                <abbr title="Dynamic HTML">
+                                    <a href="https://en.wikipedia.org/wiki/Dynamic_HTML" rel="bookmark" target="_blank">DHTML</a>,
+                                </abbr>
+                                <abbr title="Cascading Style Sheets">
+                                    <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" rel="bookmark" target="_blank">CSS</a>,
+                                </abbr>
+                                <abbr title="Scalable Vector Graphics">
+                                    <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" rel="bookmark" target="_blank">SVG</a>
+                                </abbr>
+                            </td>
+                        </tr>
+                        <tr class="rowhidden">
+                            <th colspan="3">Programming Skills</th>
+                            <td colspan="4"
+                                onclick="editData(this, 'programming skills');"
+                                onmouseover="console.log(this.title);">
+                                Decent
+                                <acronym title="JavaScript">
+                                    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JS</a>,
+                                </acronym>
+                                <acronym title="JavaScript Object-Oriented Programming">
+                                    <a href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank">JS OOP</a>,
+                                </acronym>
+                                <acronym title="Document Object Model">
+                                    <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target="_blank">DOM</a>,
+                                </acronym>
+                                <acronym title="Browser Object Model">
+                                    <a href="https://en.wikipedia.org/wiki/BOM" target="_blank">BOM</a>,
+                                </acronym>
+                                <acronym title="C-sharp">
+                                    <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a>,
+                                </acronym>
+                                <acronym title="Structured Query Language">
+                                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a>,
+                                </acronym>
+                            </td>
+                        </tr>
+                        <tr class="fieldset">
+                            <td colspan="7">
+                                <fieldset>
+                                    <legend>Programming Prowess</legend>
+                                    <section>
+                                        <label for="OopLang"><acronym title="Object Oriented Programming">OOP</acronym> Languages</label>
+                                        <select id="OopLang" name="OopLang" multiple="multiple">
+                                            <optgroup value="C-LIKE" label="C-LIKE">
+                                                <option>Objective C</option>
+                                                <option>C++</option>
+                                                <option>C#</option>
+                                            </optgroup>
+                                            <option>Java</option>
+                                            <option>VB</option>
+                                            <option>Pascal</option>
+                                            <option>Delphi</option>
+                                            <option>Python</option>
+                                        </select>
+                                    </section>
+                                    <section>
+                                        <label for="FunctionalScripts">Functional Scripts</label>
+                                        <select id="FunctionalScripts" name="FunctionalScripts" size="4">
+                                            <optgroup label="FLASH">
+                                                <option label="Action Script" title="Action Script" value="0">Action Script</option>
+                                            </optgroup>
+                                            <optgroup label="JS">
+                                                <option label="JScript" title="JScript" value="1">JScript</option>
+                                                <option label="EcmaScript" title="Ecma Script" value="2">EcmaScript</option>
+                                                <option label="Java Script" title="Java Script" value="3">Java Script</option>
+                                            </optgroup>
+                                            <optgroup label="VB">
+                                                <option label="VB Script" title="VB Script" value="4">VB Script</option>
+                                            </optgroup>
+                                            <optgroup label="OTHER">
+                                                <option label="PHP" title="php" value="5">PHP</option>
+                                                <option label="LISP" title="lisp" value="6">LISP</option>
+                                                <option label="COBOL" title="Cobol" value="7">COBOL</option>
+                                                <option label="Ruby" title="Ruby" value="8">Ruby</option>
+                                                <option label="REXX" title="Rexx" value="9">REXX</option>
+                                                <option label="PERL" title="Perl" value="10">PERL</option>
+                                            </optgroup>
+                                        </select>
+                                    </section>
+                                    <section>
+                                        <label for="mlPowers">ML Powers</label>
+                                        <input list="mlPowers" name="mlPowers">
+                                        <datalist id="mlPowers">
+                                            <option>XML</option>
+                                            <option>HTA</option>
+                                            <option>HTML</option>
+                                            <option>XHTML</option>
+                                            <option>DHTML</option>
+                                            <option>CSS</option>
+                                            <option>SVG</option>
+                                        </datalist>
+                                        </input>
+                                        <input list="mlPowers">
+                                        <datalist id="mlPowers">
+                                            <option>XML</option>
+                                            <option>HTA</option>
+                                            <option>HTML</option>
+                                            <option>XHTML</option>
+                                            <option>DHTML</option>
+                                            <option>CSS</option>
+                                            <option>SVG</option>
+                                        </datalist>
+                                        </input>
+                                        <input list="mlPowers">
+                                        <datalist>
+                                            <option>XML</option>
+                                            <option>HTA</option>
+                                            <option>HTML</option>
+                                            <option>XHTML</option>
+                                            <option>DHTML</option>
+                                            <option>CSS</option>
+                                            <option>SVG</option>
+                                        </datalist>
+                                        </input>
+                                    </section>
+                                    <section>
+                                        <label>Models</label>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="Browser Object Model" moniker-href="https://en.wikipedia.org/wiki/Browser_Object_Model">BOM</acronym>
+                                            </label>
+                                            <div class="inputs"><input type="checkbox" name="models" /></div>
+                                        </div>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="Document Object Model" moniker-href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</acronym>
+                                            </label>
+                                            <div class="inputs"><input type="checkbox" name="models" /></div>
+                                        </div>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="CSS Object Model" moniker-href="https://www.w3.org/TR/cssom-1/">CSSOM</acronym>
+                                            </label>
+                                            <div class="inputs"><input type="checkbox" name="models" /></div>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <label>Storage</label>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="My Software Query Language" onwheel="alert(1);">MySQL</acronym>
+                                            </label>
+                                            <div class="inputs">
+                                                <input type="radio" name="storage" checked="checked" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="Microsoft Structured Query Language">MsSQL</acronym>
+                                            </label>
+                                            <div class="inputs">
+                                                <input type="radio" name="storage" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="labels">
+                                                <acronym title="Oak Ridge Automatic Computer Logical Engine">Oracle</acronym>
+                                            </label>
+                                            <div class="inputs">
+                                                <input type="radio" name="storage" />
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section>
+                                        <label>JS Libs</label>
+                                        <select list="jsLibs" name="JSLibs1" size="1"></select>
+                                        <select list="jsLibs" name="JSLibs2" size="1"></select>
+                                        <select list="jsLibs" name="JSLibs3" size="1"></select>
+                                    </section>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Other</th>
+                            <td colspan="4"
+                                onclick="editData(this, 'others');"
+                                onmouseover="console.log(this.title);">
+                                music, movies
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="tbody_second">
+                        <tr>
+                            <th colspan="3">Languages</th>
+                            <th>Reading</th>
+                            <th>Writing</th>
+                            <th>Communication</th>
+                            <th>Understanding</th>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Armenian</th>
+                            <td>
+                                <mark onclick="editData(this, 'armenian reading');" onmouseover="console.log(this.title);">excellent</mark>
+                                <select>
+                                    <option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'armenian writing');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'armenian communication');" onmouseover="console.log(this.title);">excellent</mark>
+                                <select>
+                                    <option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'armenian understanding');" onmouseover="console.log(this.title);">excellent</mark>
+                                <select>
+                                    <option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Russian</th>
+                            <td>
+                                <mark onclick="editData(this, 'russian reading');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'russian writing');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'russian communication');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'armenian understanding');" onmouseover="console.log(this.title);">good</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" selected="selected" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">English</th>
+                            <td>
+                                <mark onclick="editData(this, 'english reading');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'english writing');" onmouseover="console.log(this.title);">average</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" selected="selected" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'english communication');" onmouseover="console.log(this.title);">fluent</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" selected="selected" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                            <td>
+                                <mark onclick="editData(this, 'english understanding');" onmouseover="console.log(this.title);">fluent</mark>
+                                <select>
+                                    <option label="Excellent" title="Excellent" value="0">Excellent</option>
+                                    <option label="Average" title="Average" value="1">Average</option>
+                                    <option label="Good" title="Good" value="2">Good</option>
+                                    <option label="Fluent" selected="selected" title="Fluent" value="3">Fluent</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="button" value="My first CV" onclick="notification();" chechked="checked">test</input>
+                <!-- <button type="button" onclick="notification();">Notify</button> -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

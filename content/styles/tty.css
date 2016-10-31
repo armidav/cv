@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+@import url(https://fonts.googleapis.com/css?family=Cookie);
+
+@font-face {
+    font-family: Cheveuxdange;
+    src: url(../fonts/Cheveuxdange.ttf);
+}
+@font-face {
+    font-family: Museo;
+    src: url(content/fonts/Museo-700.otf);
+}
+body {
+    display: block;
+    background-image: url(../imgs/school.png);
+    overflow: hidden;
+}
+caption {
+    color: rgba(54, 108, 139, 1);
+    font: 30px 'Museo700';
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+
+    opacity: 0.3;
+}
+th, td {
+    height: 25px;
+
+    color: rgba(54, 108, 139, 1);
+    font-family: Cookie;
+    font-size: 25px;
+}
+
+tbody:nth-of-type(1) td {
+    text-align: left;
+}
+tbody:nth-of-type(1) th:nth-of-type(1) {
+    text-align: right;
+}
+tbody:nth-of-type(1) th:nth-of-type(2) {
+    text-align: right;
+    padding-right: 10px;
+}
+tbody:nth-of-type(1) td:nth-of-type(1) {
+    padding-left: 10px;
+}
+a {
+    color: rgba(54, 108, 139, .7);
+    text-decoration: none;
+}
+input[type=search] {
+    display: none;
+}
+
+.tbody_first {
+    width: 100%;
+
+    display: table;
+}
+.tbody_second {
+    width: 100%;
+
+    display: table;
+
+    border-top: 20px solid transparent;
+}
+.find_me {
+    height: 60px;
+    width: 100px;
+
+    position: absolute;
+    top: 120px;
+    right: -125px;
+
+    background-repeat: no-repeat;
+}
+.find:hover .find_me {
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: find_me;
+}
+.fb_icon {
+    height: 40px;
+    width: 40px;
+
+    position: absolute;
+    top: 120px;
+    right: -73px;
+
+    background-image: url(../imgs/logo_Fb.png);
+    background-size: cover;
+    display: inline-block;
+    opacity: 0;
+}
+.fb_icon:hover {
+    transform: scale(1.5);
+}
+.find:hover .fb_icon{
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: icon_opacity;
+}
+.twitter_icon {
+    height: 43px;
+    width: 43px;
+
+    position: absolute;
+    top: 135px;
+    right: -120px;
+
+    background-image: url(../imgs/logo_twitter.png);
+    background-size: cover;
+    display: inline-block;
+    opacity: 0;
+}
+.twitter_icon:hover {
+    transform: scale(1.5);
+}
+.find:hover .twitter_icon {
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-name: icon_opacity;
+}
+.main_imgs_first {
+    height: 208px;
+    width: 207px;
+
+    position: absolute;
+    top: 35px;
+    right: -180px;
+
+    background-image: url(../imgs/sticky_note.png);
+}
+.window_block {
+    height: 510px;
+    width: 100%;
+    min-width: 800px;
+    max-width: 800px;
+
+    position: relative;
+
+    vertical-align: middle;
+    
+    display: inline-block;
+    background-image: url(../imgs/notebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    padding: 90px 50px 50px 50px;
+}
+.cube_fb, .cube_twitter, .coffee_stain, .coffee_twitter, .cup, .cup_move, .fieldset, .tooltip, .water_content, #pult{
+    display: none;
+}
+
+@keyframes icon_opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes find_me {
+    from{
+        position: absolute;
+        top: 120px;
+        right: -125px;
+    }
+    to{
+        position: absolute;
+        top: 75px;
+        right: -140px;
+    }
+}
